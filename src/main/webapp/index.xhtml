@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Employee Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container mt-4">
+        <h3>Employee Details</h3>
+        <h:form>
+            <p><h:outputLabel value="#{employee.response}" /></p>
+
+            <h:dataTable value="#{employee.list}" var="row" class="table table-striped mt-4">
+                <h:column>
+                    <f:facet name="header">Employee ID</f:facet>
+                    #{row.eid}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Employee Name</f:facet>
+                    #{row.name}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Employee Gender</f:facet>
+                    #{row.gender}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Employee Address</f:facet>
+                    #{row.address}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Employee Mobile</f:facet>
+                    #{row.mobile}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Employee Email</f:facet>
+                    #{row.email}
+                </h:column>
+				<h:column>
+					<h:commandButton action="#{employeeBean.updateEmployee}"
+						value="UPDATE" styleClass="btn btn-warning" />
+				</h:column>
+			</h:dataTable>
+        </h:form>
+    </div>
+</body>
+</html>

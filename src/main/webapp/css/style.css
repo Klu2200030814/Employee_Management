@@ -1,0 +1,37 @@
+/* Navbar styles */
+.navbarbackground {
+    background-color: #007bff; /* Blue color */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it is on top */
+}
+
+/* Make sure the content below the navbar is not hidden */
+body {
+    padding-top: 70px; /* Adjust this value based on your navbar height */
+}
+
+
+        /* Navbar links color */
+        .navbar-nav .nav-link {
+            color: #fff; /* White text */
+        }
+
+        /* Navbar links color on hover */
+        .navbar-nav .nav-link:hover {
+            color: #e0e0e0; /* Slightly lighter color on hover */
+        }
+
+        /* Search button color */
+        .btn-outline-success {
+            border-color: #28a745; /* Green border */
+            color: #28a745; /* Green text */
+        }
+
+        /* Search button color on hover */
+        .btn-outline-success:hover {
+            background-color: #28a745; /* Green background on hover */
+            color: #fff; /* White text on hover */
+        }
